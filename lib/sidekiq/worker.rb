@@ -48,7 +48,7 @@ module Sidekiq
       end
 
       def get_sidekiq_options # :nodoc:
-        defined?(@sidekiq_options) ? @sidekiq_options : { 'unique' => true, 'retry' => true, 'queue' => 'default' }
+        defined?(@sidekiq_options) ? @sidekiq_options : { 'unique' => true, 'retry' => 5, 'queue' => 'default' }
       end
 
       def stringify_keys(hash) # :nodoc:
